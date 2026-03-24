@@ -1,0 +1,47 @@
+[
+    {
+        "nombre": "consorcio 1",
+        "categoria": "Contratos (Arrendamiento/Franquicia)",
+        "entidad": "legal",
+        "fecha_vencimiento": "2026-03-24",
+        "dias_alerta_previa": 28,
+        "responsable": "joel",
+        "prioridad": "Media"
+    },
+    {
+        "nombre": "Certificado de Seguridad Bomberos",
+        "categoria": "Permisología Cali (Bomberos/RIF/Sanidad)",
+        "entidad": "Cuerpo de Bomberos de Cali",
+        "fecha_vencimiento": "2026-04-10",
+        "dias_alerta_previa": 30,
+        "responsable": "Operaciones",
+        "prioridad": "Crítica"
+    },
+    {
+        "nombre": "Permiso de Importación - Materia Prima",
+        "categoria": "Compras (Importación)",
+        "entidad": "Aduanas / VUCE",
+        "fecha_vencimiento": "2026-03-30",
+        "dias_alerta_previa": 45,
+        "responsable": "Compras",
+        "prioridad": "Alta"
+    },
+    {
+        "nombre": "Inspección Técnica de Calderas",
+        "categoria": "Producción (Calderas/Químicos)",
+        "entidad": "Mantenimiento Industrial",
+        "fecha_vencimiento": "2026-06-20",
+        "dias_alerta_previa": 30,
+        "responsable": "Planta de Producción",
+        "prioridad": "Alta"
+    },
+    {
+        "nombre": "Registro de Marca 'Helados Cali'",
+        "categoria": "Marcas SAPI",
+        "entidad": "SAPI",
+        "fecha_vencimiento": "2035-11-12",
+        "dias_alerta_previa": 180,
+        "responsable": "Propiedad Intelectual",
+        "prioridad": "Media"
+    }
+]
