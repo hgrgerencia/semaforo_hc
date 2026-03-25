@@ -5,38 +5,11 @@ import os
 from datetime import datetime
 from controller.registro_controller import FactoryRegistros
 
-DB_FILE = 'data.json'
-
-# --- Funciones de Soporte ---
 CATEGORIAS = ["Productos (CPE/Sanitario)", "Contratos (Arrendamiento/Franquicia)", "Permisología Cali (Bomberos/RIF/Sanidad)", "Compras (Importación)", "Producción (Calderas/Químicos)", "Marcas SAPI"]
-def cargar_datos():
-    if os.path.exists(DB_FILE):
-        with open(DB_FILE, 'r', encoding='utf-8') as f:
-            return json.load(f)
-    return []
 
-def guardar_todos(data):
-    with open(DB_FILE, 'w', encoding='utf-8') as f:
-        json.dump(data, f, indent=4, ensure_ascii=False)
-
-def eliminar_registro(idx):
-    data = cargar_datos()
-    if 0 <= idx < len(data):
-        eliminado = data.pop(idx)
-        guardar_todos(data)
-        return True, eliminado['nombre']
-    return False, ""
-
-def actualizar_registro(idx, nuevos_datos):
-    data = cargar_datos()
-    if 0 <= idx < len(data):
-        data[idx] = nuevos_datos
-        guardar_todos(data)
-        return True
-    return False
 
 # ==========================================
-# 2. MODALES (DIALOGS)
+# 1. MODALES (DIALOGS)
 # ==========================================
 
 @st.dialog("Editar Registro")
@@ -93,12 +66,11 @@ def modal_confirmar_eliminar(idx, nombre_registro):
             st.rerun() # Simplemente cierra el modal al recargar
 
 # ==========================================
-# 3. VISTA DE REGISTRO
+# 2. VISTA DE REGISTRO
 # ==========================================
 def vista_registro():
     st.title("⚙️ Gestión de Base de Datos")
     
-
     # --- Sección de Nuevo Registro ---
     with st.expander("➕ Agregar Nuevo Registro"):
         with st.form("form_nuevo", clear_on_submit=True):

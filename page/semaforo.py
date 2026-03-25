@@ -5,8 +5,6 @@ import os
 from datetime import datetime
 from controller.registro_controller import FactoryRegistros
 
-DB_FILE = 'data.json'
-
 # --- Funciones de Soporte ---
 def cargar_datos():
     [data, df] = FactoryRegistros.get_all_collection(1)
