@@ -11,11 +11,12 @@ if "login" not in st.session_state:
     st.session_state.login = False
     st.session_state.menu = ["🗝️ Login"]
 
+NOMBRE_EMPRESA = st.secrets["NOMBRE_EMPRESA"]
 def main():
     
     with st.sidebar: 
         selected = option_menu( 
-            menu_title="🚦 Semaforo H.C", 
+            menu_title=F"🚦 Semaforo {NOMBRE_EMPRESA}", 
             options=st.session_state.menu, 
             menu_icon="cast", 
             default_index=0, 

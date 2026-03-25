@@ -5,10 +5,9 @@ def show_login():
     LISTA_MENU_ADMIN= [ "📊 Panel de Semáforo","📝 Registrar Obligación","🔐 Cerrar Sesión"]
     LISTA_MENU_OBSERVADOR= [ "📊 Panel de Semáforo","🔐 Cerrar Sesión"]
 
+    st.image(IMG,width="content")
     col1, col2, col3 = st.columns([3,2,3])
     
-    with col2:
-        st.image(IMG,width=200)
         
     st.title("Iniciar Sesión")
     with st.form(key="login_form",clear_on_submit=True):
